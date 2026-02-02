@@ -1,0 +1,25 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def plot_comparison(baseline_csv, drl_csv):
+    baseline = pd.read_csv(baseline_csv)
+    drl = pd.read_csv(drl_csv)
+
+    labels = ["Baseline", "GlobalAmBC-DRL"]
+    values = [baseline["success_rate"][0], drl["success_rate"][0]]
+
+    plt.figure()
+    plt.bar(labels, values)
+    plt.ylabel("Average Success Rate")
+    plt.ylim(0, 1)
+    plt.title("Comparison of Network Success Rate")
+
+    plt.savefig("../results/figures/success_rate_comparison.pdf")
+    plt.show()
+
+
+if __name__ == "__main__":
+    plot_comparison(
+        "baseline_success_rate_summary.csv",
+        "drl_success_rate_summary.csv"
+    )

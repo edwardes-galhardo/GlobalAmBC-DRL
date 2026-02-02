@@ -1,0 +1,31 @@
+import pandas as pd
+import sys
+from pathlib import Path
+
+def collect_scalar_metrics(sca_file):
+    data = []
+
+    with open(sca_file, 'r') as f:
+        for line in f:
+            if line.startswith("scalar"):
+                parts = line.strip().split()
+                module = parts[1]
+                name = parts[2]
+                value = float(parts[3])
+                data.append([module, name, value])
+
+    return pd.DataFrame(data, columns=["module", "metric", "value"])
+
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: python collect_metrics.py <file.sca>")
+        sys.exit(1)
+
+    sca_path = Path(sys.argv[1])
+    df = collect_scalar_metrics(sca_path)
+
+    output = sca_path.with_suffix(".csv")
+    df.to_csv(output, index=False)
+
+    print(f"[OK] Metrics extracted to {output}")

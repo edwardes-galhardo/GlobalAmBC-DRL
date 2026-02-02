@@ -1,0 +1,28 @@
+import pandas as pd
+import sys
+
+def compute_success_rate(df):
+    sent = df[df["metric"].str.contains("sent", case=False)]
+    received = df[df["metric"].str.contains("received", case=False)]
+
+    sent_total = sent["value"].sum()
+    received_total = received["value"].sum()
+
+    success_rate = received_total / sent_total if sent_total > 0 else 0
+    return success_rate
+
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: python preprocess_data.py <metrics.csv>")
+        sys.exit(1)
+
+    df = pd.read_csv(sys.argv[1])
+    rate = compute_success_rate(df)
+
+    result = pd.DataFrame({
+        "success_rate": [rate]
+    })
+
+    result.to_csv("success_rate_summary.csv", index=False)
+    print("[OK] Success rate computed")

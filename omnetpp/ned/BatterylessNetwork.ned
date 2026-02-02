@@ -1,4 +1,14 @@
+package globalambc.network;
+
+import inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator;
+import inet.node.inet.StandardHost;
+import inet.physicallayer.contract.packetlevel.IRadioMedium;
+import inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarRadioMedium;
+
+import globalambc.control.GlobalAmBCDRLModule;
+
 [General]
+
 network = globalambc.network.BatterylessNetwork
 sim-time-limit = 300s
 
