@@ -1,0 +1,95 @@
+A ideia é:
+
+rodar sem erro no OMNeT++
+
+representar uma rede IoT densa sem bateria
+
+permitir ativar/desativar o GlobalAmBC-DRL via .ini
+
+servir como base reprodutível, mesmo que o DRL esteja inicialmente “stubado”
+
+
+---------------------------------------------------------------------------
+📁 1️⃣ Arquivo .ned
+
+📍 Local: omnetpp/ned/BatterylessNetwork.ned
+
+
+O que esse NED faz (importante para o artigo):
+
+cria uma rede densa (numNodes)
+
+usa INET padrão (evita dor de cabeça)
+
+separa claramente:
+
+nós
+
+meio físico
+
+módulo de controle sistêmico
+
+reflete exatamente o que eu descrevi na Seção 4 do artigo submetido ao SBRC2026
+
+
+-----------------------------------------------------------------------------
+📁 2️⃣ Arquivo .ini — Cenário Base (sem DRL)
+
+📍 Local: omnetpp/simulations/baseline.ini
+
+
+✔️ Esse cenário representa:
+
+rede sem controle
+
+comportamento instável esperado
+
+baseline para comparação (como no artigo)
+
+
+--------------------------------------------------------
+📁 3️⃣ Arquivo .ini — Cenário com GlobalAmBC-DRL
+
+📍 Local: omnetpp/simulations/drl_enabled.ini
+
+
+✔️ Esse cenário:
+
+ativa o controle centralizado
+
+permite variar potência, taxa ou outro parâmetro
+
+casa diretamente com a Figura 3 e a Seção 5
+
+
+-------------------------------------------------------
+📁 4️⃣ Stub mínimo do módulo GlobalAmBC-DRL
+
+📍 Local: omnetpp/src/GlobalAmBCDRLModule.h
+
+------------------------------------------------------
+📍 Local: omnetpp/src/GlobalAmBCDRLModule.cc
+
+📌 Importante:
+Esse módulo:
+
+compila
+
+executa
+
+representa fielmente o papel arquitetural
+
+não finge aprendizado interno (o DRL é externo, como no artigo)
+
+
+
+
+
+
+
+
+
+
+
+
+
