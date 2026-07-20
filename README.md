@@ -32,7 +32,7 @@ The framework implements the GlobalAmBC-DRL Control Module, a centralized decisi
 The GlobalAmBC-DRL framework integrates network simulation, global state aggregation, and Deep Reinforcement Learning (DDPG) to enable adaptive control in dense batteryless IoT networks based on Ambient Backscatter Communication (AmBC).
 
 <p align="center">
-  <img src="docs/FiguraPrincipal4" alt="GlobalAmBC-DRL Architecture" width="900"/>
+  <img src="./docs/FiguraPrincipal4.png" alt="GlobalAmBC-DRL Architecture" width="900">
 </p>
 
 <p align="center">
