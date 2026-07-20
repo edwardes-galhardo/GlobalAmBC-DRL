@@ -47,6 +47,46 @@ The framework operates as a closed-loop control system composed of four main com
 - **Adaptive Reflection Controller:** applies the selected action to the simulated network.
 
 ---
+---
+
+# Repository Structure
+
+The repository is organized as follows:
+
+```text
+GlobalAmBC-DRL/
+│
+├── docs/
+│   ├── FiguraPrincipal4.png
+│   ├── Guia_tecnico_auxiliar_Portugues...
+│   └── technical_guide_beginner_INGL...
+│
+├── omnetpp/
+│   ├── simulations
+│   ├── src
+│   └── configuration files
+│
+├── scripts/
+│   ├── data processing
+│   ├── automation
+│   └── analysis
+│
+├── LICENSE
+├── README.md
+└── .gitignore
+```
+
+### Main directories
+
+| Directory | Description |
+|-----------|-------------|
+| **docs/** | Documentation, architecture figures, and technical guides. |
+| **omnetpp/** | OMNeT++ simulation environment and network models. |
+| **scripts/** | Python scripts for automation, processing, and experiment execution. |
+| **README.md** | Project documentation. |
+| **LICENSE** | MIT License. |
+
+
 
 ## Key Features
 
