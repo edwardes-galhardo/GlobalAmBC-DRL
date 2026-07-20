@@ -7,6 +7,7 @@
 [![Research](https://img.shields.io/badge/Research-UFG-blue.svg)]()
 [![OMNeT++](https://img.shields.io/badge/Simulator-OMNeT++-orange.svg)]()
 [![Python](https://img.shields.io/badge/Python-3.x-blue.svg)]()
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21463717.svg)](https://doi.org/10.5281/zenodo.21463717)
 
 ## Overview
 
