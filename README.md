@@ -170,6 +170,11 @@ This software supports the experimental evaluation presented in the following sc
 
 # Citation
 
+This software is permanently archived on Zenodo.
+
+**DOI:** https://doi.org/10.5281/zenodo.21463717
+
+
 If you use this software in your research, please cite the associated publication.
 
 
