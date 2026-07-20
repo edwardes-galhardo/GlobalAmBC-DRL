@@ -27,6 +27,27 @@ The framework implements the GlobalAmBC-DRL Control Module, a centralized decisi
 
 ---
 
+## System Architecture
+
+The GlobalAmBC-DRL framework integrates network simulation, global state aggregation, and Deep Reinforcement Learning (DDPG) to enable adaptive control in dense batteryless IoT networks based on Ambient Backscatter Communication (AmBC).
+
+<p align="center">
+  <img src="docs/FiguraPrincipal4 (1)" alt="GlobalAmBC-DRL Architecture" width="900"/>
+</p>
+
+<p align="center">
+<b>Figure 1.</b> Overall architecture of the GlobalAmBC-DRL framework.
+</p>
+
+The framework operates as a closed-loop control system composed of four main components:
+
+- **OMNeT++ Simulation Environment:** simulates dense batteryless IoT networks.
+- **Global State Aggregator:** collects network-wide metrics.
+- **DDPG Agent:** computes the optimal reflection coefficient.
+- **Adaptive Reflection Controller:** applies the selected action to the simulated network.
+
+---
+
 ## Key Features
 
 - Adaptive reflection coefficient optimization
